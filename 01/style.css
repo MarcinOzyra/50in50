@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.panel {
+  display: flex;
+  width: 100rem;
+}
+
+[class^='panel__'] {
+  background-size: cover 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 5rem;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 1rem;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+h3 {
+  font-size: 2.4rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  margin: 0;
+  opacity: 0;
+}
+
+.active {
+  flex: 4;
+}
+
+.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-out 0.4s;
+}
+
+.panel__1 {
+  background-image: url('https://images.unsplash.com/photo-1651088578548-71d46cde5bfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80');
+}
+.panel__2 {
+  background-image: url('https://images.unsplash.com/photo-1651117301996-3ba9c6b3e259?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=691&q=80');
+}
+.panel__3 {
+  background-image: url('https://images.unsplash.com/photo-1650542914986-30a677e3414a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+}
+.panel__4 {
+  background-image: url('https://images.unsplash.com/photo-1651085410720-ba9c43b5e1fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+}
+.panel__5 {
+  background-image: url('https://images.unsplash.com/photo-1651131752889-55dd3f47cd5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80');
+}
+
+@media (max-width: 480px) {
+  .panel {
+    width: 100vw;
+  }
+
+  [class^='panel__']:nth-of-type(4),
+  [class^='panel__']:nth-of-type(5) {
+    display: none;
+  }
+}
