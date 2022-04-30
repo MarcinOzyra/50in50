@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f6f7fb;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.component {
+  text-align: center;
+}
+
+.progress {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 3rem;
+  max-width: 100%;
+  width: 35rem;
+}
+
+.progress::before {
+  content: '';
+  background-color: var(--line-border-empty);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  /* z-index: -1; */
+}
+
+.progress__line {
+  background-color: var(--line-border-fill);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  z-index: 1;
+  transition: 0.4s ease;
+}
+
+.progress__circle {
+  font-size: 1.4rem;
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  z-index: 10;
+  transition: 0.4s ease;
+}
+
+.progress__circle.progress__circle--active {
+  border-color: var(--line-border-fill);
+}
+
+.progress__btn {
+  background-color: var(--line-border-fill);
+  color: #fff;
+  border: 0;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.4rem;
+  padding: 0.8rem 3rem;
+  margin: 0.5rem;
+  /* border: 1px solid #fff; */
+}
+
+.progress__btn:active {
+  transform: scale(0.98);
+}
+
+.progress__btn:focus {
+  outline: none;
+  /* border: 1px solid #74b6e2; */
+  background-color: #1a93e4;
+}
+
+.progress__btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
+}
