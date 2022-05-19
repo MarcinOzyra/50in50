@@ -48,22 +48,26 @@ header {
 }
 
 main {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 30rem);
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem;
 }
 
 .movie {
-  width: 30rem;
-  margin: 1.6rem;
   background-color: var(--secondary-color);
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
   border-radius: 3px;
+  display: flex;
+  flex-direction: column;
 }
 
 .movie img {
   width: 100%;
+  margin-bottom: auto;
 }
 
 .movie-info {
