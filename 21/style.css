@@ -17,6 +17,7 @@ body {
 }
 
 .empty {
+  flex-shrink: 0;
   height: 15rem;
   width: 15rem;
   margin: 1rem;
