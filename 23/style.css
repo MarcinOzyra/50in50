@@ -43,9 +43,6 @@ body {
   animation: rotateB 2s linear infinite;
 }
 
-.kinetic::after {
-}
-
 @keyframes rotateA {
   0%,
   25% {
