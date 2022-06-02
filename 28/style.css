@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  /* height: 100vh; */
+  background-color: #2a2a72;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.user-form {
+  width: 100%;
+  max-width: 70rem;
+  display: block;
+  margin-top: 3rem;
+  padding: 0 3.2rem;
+}
+
+.user-form input {
+  width: 100%;
+  display: block;
+  background-color: #4c2885;
+  border: none;
+  border-radius: 1rem;
+  color: #fff;
+  padding: 1.6rem;
+  margin-bottom: 3.2rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  box-shadow: 0 0.5rem 1rem rgba(154, 160, 185, 0.05), 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+}
+
+.user-form input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.5rem rgb(255 255 255 / 50%);
+}
+
+.user-form input::placeholder {
+  color: #bbb;
+}
+
+.card {
+  max-width: 80rem;
+  background-color: #4c2885;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(154, 160, 185, 0.05), 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 3.2rem;
+  padding: 4.8rem;
+  margin: 0 2.4rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 1rem solid #2a2a72;
+  max-width: 15rem;
+  height: auto;
+}
+
+.user-info {
+  color: #fff;
+}
+
+.user-info h2 {
+  margin-bottom: 2.4rem;
+}
+
+.user-info ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  max-width: 40rem;
+  margin: 1.8rem 0;
+}
+
+.user-info ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.user-info ul li strong {
+  font-size: 1.4rem;
+}
+
+.repos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.repo:link,
+.repo:visited {
+  text-decoration: none;
+  color: #fff;
+  background-color: #2a2a72;
+  font-size: 1.3rem;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .user-info ul {
+    flex-direction: column;
+  }
+}
