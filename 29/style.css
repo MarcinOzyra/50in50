@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  background-color: #fff;
+}
+
+h3 {
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+}
+
+small {
+  display: block;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.fa-heart {
+  color: red;
+}
+
+.loveme {
+  height: 44rem;
+  width: 30rem;
+  background: url(https://images.unsplash.com/photo-1654222963678-3d37d3178ea4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-inline: auto;
+  cursor: pointer;
+  max-width: 100%;
+  position: relative;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.loveme .fa-heart {
+  position: absolute;
+  pointer-events: none;
+  animation: grow 0.6s linear;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes grow {
+  to {
+    transform: translate(-50%, -50%) scale(10);
+    opacity: 0;
+  }
+}
