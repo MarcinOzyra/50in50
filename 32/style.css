@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  max-width: 20rem;
+  width: 100%;
+}
+
+.toggle {
+  visibility: hidden;
+}
+
+.toggle:checked + .label {
+  background-color: #8e44ad;
+}
+
+.toggle:checked + .label .ball {
+  transform: translateX(4rem);
+}
+
+.label {
+  background-color: #d0d0d0;
+  width: 8rem;
+  height: 4rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  position: relative;
+}
+
+.ball {
+  width: 3.4rem;
+  height: 3.4rem;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 0.3rem;
+  top: 0.3rem;
+  transition: transform 0.1s linear;
+}
