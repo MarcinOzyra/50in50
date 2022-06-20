@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  background-color: #f8f9fd;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 30rem;
+}
+
+.subtitle {
+  display: inline-block;
+  margin: 0.5rem 0 2rem;
+  opacity: 0.8;
+}
+
+.header {
+  background-color: #3e57db;
+  color: #fff;
+  padding: 3rem 2rem;
+}
+
+.header input {
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 5rem;
+  padding: 1rem 1.5rem;
+  width: 100%;
+}
+
+.header input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(0 0 0 / 50%);
+}
+
+.user-list {
+  background-color: #fff;
+  list-style: none;
+  max-height: 40rem;
+  overflow-y: auto;
+}
+
+.user-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.user-list img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 5rem;
+  height: 5rem;
+}
+
+.user-list .user-info p {
+  font-size: 1.2rem;
+}
+
+.user-list li:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+
+.user-list li.hide {
+  display: none;
+}
