@@ -1,0 +1,121 @@
+:root {
+  --thumb-width: 2.4rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h2 {
+  position: absolute;
+  top: 2rem;
+}
+
+.range-container {
+  position: relative;
+}
+
+input[type='range'] {
+  width: 30rem;
+  margin: 1.8rem 0;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range']:focus::-webkit-slider-thumb {
+  background-color: purple;
+  border: 2px solid #fff;
+}
+
+input[type='range'] + label {
+  background-color: #fff;
+  font-size: 1.2rem;
+  position: absolute;
+  top: -2.5rem;
+  /* left: calc(30rem / 2); */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5rem;
+  padding: 0.5rem 0;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Chrome and Safari */
+input[type='range']::-webkit-slider-runnable-track {
+  background: purple;
+  border-radius: 4px;
+  height: 1rem;
+  cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: var(--thumb-width);
+  width: var(--thumb-width);
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid purple;
+  margin-top: -0.7rem;
+}
+
+/* Firefox */
+input[type='range']::-moz-range-track {
+  background: purple;
+  border-radius: 4px;
+  height: 1rem;
+  cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 2.4rem;
+  width: 2.4rem;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid purple;
+  margin-top: -0.7rem;
+}
+
+/* IE */
+input[type='range']::-ms-track {
+  background: purple;
+  border-radius: 4px;
+  height: 1rem;
+  cursor: pointer;
+}
+
+input[type='range']::-ms-thumb {
+  -webkit-appearance: none;
+  height: 2.4rem;
+  width: 2.4rem;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid purple;
+  margin-top: -0.7rem;
+}
